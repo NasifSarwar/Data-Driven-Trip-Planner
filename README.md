@@ -69,28 +69,4 @@ The notebook shows how to set up everything (especially for Google Colab):
   - Disable automation flags
   - Headless mode, window size, etc.
 
----
 
-### 1. Agoda Scraper: Berlin Hotels
-
-For Agoda, the notebook:
-
-- Defines a **Berlin search URL** for the selected dates.
-- Uses Selenium to:
-  - Open the search results page.
-  - Scroll / wait for content to load.
-  - Collect a list of individual hotel URLs.
-- For each hotel page, it extracts:
-  - Name, address, stars
-  - Rating and number of reviews
-  - Price per night
-  - Distance from city center (in meters)
-  - Description text
-  - Image URLs
-- Handles errors with `try/except` and continues if a single hotel fails.
-- Stores everything in a list of dictionaries and converts it to a DataFrame.
-
-The preprocessed Agoda data is saved as:
-
-```text
-output_agora_berlin.csv
